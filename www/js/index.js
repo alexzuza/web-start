@@ -1,6 +1,7 @@
 import hello from './plugins/hello';
 
-import '../css/main.css';
+import $ from './library/jquery-2.1.4';
 
-
-console.log(hello);
+$(() => {
+  console.log('dom ready');
+});
