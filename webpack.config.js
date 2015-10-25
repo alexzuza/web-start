@@ -3,6 +3,7 @@ var path = require('path');
 module.exports = {
   devtool: 'sourcemap',
   output: {
+    publicPath: '/build/',
     filename: 'bundle.js'
   },
   module: {

@@ -22,7 +22,7 @@ let resolveToLibrary = (glob) => {
 };
 
 let paths = {
-  output: root + '/build',
+  output: root + '/build/',
   entry: path.join(root, 'js/index.js'),
   js: [
     resolveToPlugins('**/*.js'),
@@ -33,7 +33,7 @@ let paths = {
     path.join(root, '**/*.html')
   ],
   css: [
-    path.join(root, '**/*.css')
+    path.join(root, '**!(build)/*.css')
   ]
 };
 
