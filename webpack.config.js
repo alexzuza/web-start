@@ -1,3 +1,5 @@
+var path = require('path');
+
 module.exports = {
   devtool: 'sourcemap',
   output: {
@@ -5,9 +7,13 @@ module.exports = {
   },
   module: {
     loaders: [
-       { test: /\.js$/, exclude: [/node_modules/], loader: 'babel' },
-       { test: /\.html$/, loader: 'raw' },
-       { test: /\.css$/, loader: 'style!css' }
+      { 
+        test: /\.js$/, 
+        include: [
+           path.resolve(__dirname, "www/js/index.js"),
+        ], 
+        loader: 'babel'
+      }
     ]
   }
 };
